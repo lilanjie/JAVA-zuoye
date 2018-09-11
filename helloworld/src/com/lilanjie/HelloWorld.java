@@ -3,20 +3,30 @@ package com.lilanjie;
 //命名 类名要用大驼峰 HelloWorld
 public class HelloWorld {
     public static void main(String[] args){
-        Student lilanjie=new Student("lilanjie",100);
-        System.out.println(lilanjie.getName()+" "+lilanjie.getScore());
-        lilanjie.setScore(98);
-        System.out.println(lilanjie.getName()+" "+lilanjie.getScore());
+        Student zhanghaoyan=new Student("张昊岩",99);
+        System.out.println(zhanghaoyan.getName()+"的分数是： "+zhanghaoyan.getScore());
 
-        Student liuxiaoying = new Student("liuxiaoying", 97);
-        System.out.println(liuxiaoying.getName()+" "+liuxiaoying.getScore());
 
-        if(lilanjie.isScoreGreaterThan(liuxiaoying)){
-            System.out.println("李澜洁比刘晓颖分数高");
+        Student lilanjie=new Student("李澜洁",100);
+        System.out.println(lilanjie.getName()+"的分数是： "+lilanjie.getScore());
+
+
+        if(lilanjie.isScoreGreaterThan(zhanghaoyan)) {
+            System.out.println("李澜洁比张昊岩分数高");
         }
 
+        System.out.println(lilanjie.getFirstName());
+
+        lilanjie.rename("盯盯");
+        zhanghaoyan.print();
+
+        Student xiaoyanyan=new Student("小岩岩",61);
+        xiaoyanyan.print();
+
+        }
     }
-}
+
+
 
 //要建个包，不要直接放在src下
 //包名一般是公司域名倒着写  如baidu.com就会以com.baidu开头
