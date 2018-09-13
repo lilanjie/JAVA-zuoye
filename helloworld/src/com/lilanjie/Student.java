@@ -49,6 +49,6 @@ public class Student {
     public void print() {
 
         System.out.println(this.getName() + "的分数是： " + this.getScore());
-//为什么要用this?我好像知道得用它但又不知道为啥。
+
     }
 }
