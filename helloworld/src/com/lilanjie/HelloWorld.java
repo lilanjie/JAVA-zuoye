@@ -47,6 +47,7 @@ public class HelloWorld {
         list.add(maolixiaowulang);
         list.add(lingmuyuanzi);
         list.add(fubupingci);
+        //尝试一下使用 for(Student student:list){}遍历
         int i;
       for(i=0;i<list.size();i++){
             Student s = list.get(i);
