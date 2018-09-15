@@ -1,8 +1,11 @@
 package com.lilanjie;
 
 
+import javax.naming.Name;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 //命名 类名要用大驼峰 HelloWorld
 public class HelloWorld {
@@ -34,6 +37,8 @@ public class HelloWorld {
         Student maolixiaowulang=new Student("毛利小五郎",87);
         Student lingmuyuanzi=new Student("铃木园子",70);
         Student fubupingci=new Student("服部平次",90);
+        Student huge=new Student("胡歌",98);
+        Student dilireba=new Student("迪丽热巴",97);
 
 
         List<Student> list = new ArrayList<>();
@@ -48,11 +53,26 @@ public class HelloWorld {
         list.add(lingmuyuanzi);
         list.add(fubupingci);
         //尝试一下使用 for(Student student:list){}遍历
-        int i;
-      for(i=0;i<list.size();i++){
-            Student s = list.get(i);
-            s.print();
-        }
+        //int i;
+      //for(i=0;i<list.size();i++){
+            //Student s = list.get(i);
+            //s.print();
+        //}
+       // for(Student student:list){
+        //    student.print();
+        //}
+
+        Map<String,Student>map=new HashMap<>();
+          map.put("李澜洁" ,lilanjie);
+          map.put("张昊岩",zhanghaoyan);
+          map.put("胡歌",huge);
+          map.put("迪丽热巴",dilireba);
+
+          map.get("胡歌").print();
+        
+
+
+
 
 
 
