@@ -69,22 +69,26 @@ public class HelloWorld {
 
         //map.get("胡歌").print();
 
-    StudentList list=new StudentList();
-         list.add(0,lilanjie);
-         list.add(1,zhanghaoyan);
-         list.add(2,xiaoyanyan);
-         list.add(3,kenan);
-         list.add(4,dilireba);
+    //StudentList list=new StudentList();
+        // list.add(0,lilanjie);
+        // list.add(1,zhanghaoyan);
+         //list.add(2,xiaoyanyan);
+         //list.add(3,kenan);
+        // list.add(4,dilireba);
         // list.add(2,huge);
-        list.remove(3);
+        //list.remove(3);
 
         // list.add(9,huge);
         // Student n=list.getStudent(2);
         // n.print();
+        StudentLinkedList linkedList = new StudentLinkedList();
+        ((StudentLinkedList) linkedList).add(0,lilanjie);
+         ((StudentLinkedList) linkedList).add(1,zhanghaoyan);
+        ((StudentLinkedList) linkedList).add(2,xiaoyanyan);
+        ((StudentLinkedList) linkedList).add(3,kenan);
+         ((StudentLinkedList) linkedList).add(4,dilireba);
+         ((StudentLinkedList) linkedList).add(5,huge);
 
-        for(Student student:list){
-            student.print();
-        }
 
 
 
