@@ -42,6 +42,7 @@ public class StudentLinkedList {
             Node<Student> x = first;
             for (int i = 0;i< index; i++)
                 x = x.next;
+            return x;
         }
         else {
             Node<Student> x = last;
@@ -49,7 +50,7 @@ public class StudentLinkedList {
                 x = x.prev;
             return x;
         }
-        return ;
+
     }
     void linkBefore(Student student,Node<Student> succ){
         final Node<Student> pred = succ.prev;
@@ -87,7 +88,7 @@ public class StudentLinkedList {
         }
         x.item = null;
         size--;
-        return
+        return student;
     }
     public Student get(int index){
         //checkStudentIndex(index);

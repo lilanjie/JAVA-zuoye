@@ -52,10 +52,7 @@ public class HelloWorld {
         //list.add(maolixiaowulang);
         //list.add(fubupingci);
         //尝试一下使用 for(Student student:list){}遍历
-        //int i;
-        //for(i=0;i<list.size();i++){
-        //Student s = list.get(i);
-        //s.print();
+        //c
         //}
         // for(Student student:list){
         //    student.print();
@@ -82,12 +79,22 @@ public class HelloWorld {
         // Student n=list.getStudent(2);
         // n.print();
         StudentLinkedList linkedList = new StudentLinkedList();
-        ((StudentLinkedList) linkedList).add(0,lilanjie);
-         ((StudentLinkedList) linkedList).add(1,zhanghaoyan);
-        ((StudentLinkedList) linkedList).add(2,xiaoyanyan);
-        ((StudentLinkedList) linkedList).add(3,kenan);
-         ((StudentLinkedList) linkedList).add(4,dilireba);
-         ((StudentLinkedList) linkedList).add(5,huge);
+         linkedList.add(0,lilanjie);
+        linkedList.add(1,zhanghaoyan);
+         linkedList.add(2,xiaoyanyan);
+         linkedList.add(3,kenan);
+         linkedList.add(4,dilireba);
+         linkedList.add(5,huge);
+
+         Student n = linkedList.get(3);
+         n.print();
+         linkedList.remove(3);
+         linkedList.add(3,gongtengxinyi);
+
+        for(int i=0;i<linkedList.size;i++) {
+            Student s = linkedList.get(i);
+            s.print();
+        }
 
 
 
