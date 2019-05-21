@@ -11,7 +11,7 @@ public class Point {
         this.y = y;
     }
 
-    public double getDistance(Point m, Point n) {
+    public static double getDistance(Point m, Point n) {
 
         return Math.sqrt(Math.pow(m.x - n.x, 2) + Math.pow(m.y - n.y, 2));
 
@@ -30,6 +30,12 @@ public class Point {
 
     public int getY(){
         return y;
+    }
+
+    public static Point randomCreate(){
+        int x=(int)(Math.random()*8800);
+        int y=(int)(Math.random()*8800);
+        return new Point(x,y);
     }
 
 
