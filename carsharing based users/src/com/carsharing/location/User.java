@@ -50,11 +50,11 @@ package com.carsharing.location;
             return false;
         }
 
-        public void print() {
+       // public void print() {
 
-            System.out.println("用户原点是： " + this.getOrign()+"终点是："+this.getDestination()+" 出发时间是："+this.getDeparttime());
-
-        }
+          //  System.out.println("用户原点是： " + this.getOrign()+"终点是："+this.getDestination()+" 出发时间是："+this.getDeparttime());
+//
+        //}
 
 
        /*

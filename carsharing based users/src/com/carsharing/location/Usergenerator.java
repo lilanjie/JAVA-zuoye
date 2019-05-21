@@ -9,23 +9,28 @@ import java.util.ArrayList;
 
 public class Usergenerator {
 
-    public static User RandomCreate(){
-        List userlist = new List();
-        int Usernm = 100;
-        for (int n =0; n <Usernm; n++){
-            User users = User.RandomCreate();
-            if(users.isEnoughFar()){
-               userlist.add(users);
+    public static User[] RandomCreate(){
+        User[] users = new User[100];
+        //java.util.List<User> userList = new ArrayList<>();
+        int Usernum = 100;
+        for (int n =0; n <Usernum; n++){
+             User user = User.RandomCreate();
+            if(user.isEnoughFar()){
+                users[n] = user;
+              //userList.add(users);
+                System.out.println("用户原点是： " + user.getOrign()+"终点是："+user.getDestination()+" 出发时间是："+user.getDeparttime());
+
             }
         }
-        return new User();
+        return users;
     }
 
     public  static void writeToFile(String name) {
         try {
             FileOutputStream fs = new FileOutputStream(name);
             ObjectOutputStream os = new ObjectOutputStream(fs);
-            os.writeObject(User.RandomCreate());
+            User[] users = new User[100];
+            os.writeObject(users);
             os.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -45,8 +50,7 @@ public class Usergenerator {
     }
 
     public static void main(String[] args) {
-        User user = User.RandomCreate();
-        user.print();
+        Usergenerator.RandomCreate();
         Usergenerator.writeToFile("user");
     }
 
