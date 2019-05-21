@@ -9,24 +9,21 @@ import java.util.ArrayList;
 import com.carsharing.location.Point;
 
 public class Station {
-    Point station;
-
+    private Point stations;
     public static Station Creatlocation() {
-        List<Point> list = new ArrayList<Point>();
-
+        List stationlist = new List();
         for (int i = 1; i < 12; i++) {
             for (int j = 1; j < 12; j++) {
-                Point station = new Point(400 * i, 400 * j);
-                list.add(station);
+                Point stations = new Point(400 * i, 400 * j);
+                stationlist.add(stations);
             }
-
         }
-        return new Station();
+        return new stations ;
     }
 
     public void print() {
 
-        System.out.println("站点x:" + station.getX() + "y:" + station.getY());
+            System.out.println("站点:" + stations.getX()+","+stations.getY());
 
     }
 

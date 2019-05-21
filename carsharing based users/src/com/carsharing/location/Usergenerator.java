@@ -8,25 +8,24 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class Usergenerator {
-    User user;
 
     public static User RandomCreate(){
-        List<Point> list = new ArrayList<Point>();
+        List userlist = new List();
         int Usernm = 100;
         for (int n =0; n <Usernm; n++){
             User users = User.RandomCreate();
             if(users.isEnoughFar()){
-               list.add(users);
+               userlist.add(users);
             }
         }
         return new User();
     }
 
-    public void writeToFile(String name) {
+    public  static void writeToFile(String name) {
         try {
             FileOutputStream fs = new FileOutputStream(name);
             ObjectOutputStream os = new ObjectOutputStream(fs);
-            os.writeObject(this);
+            os.writeObject(User.RandomCreate());
             os.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -46,7 +45,7 @@ public class Usergenerator {
     }
 
     public static void main(String[] args) {
-        User user = User.RandomCreate());
+        User user = User.RandomCreate();
         user.print();
         Usergenerator.writeToFile("user");
     }
