@@ -11,11 +11,11 @@ import com.carsharing.location.Point;
 public class Station {
     private Point stations;
     public static Station Creatlocation() {
-        List stationlist = new List();
+        java.util.List<Point> list = new Arraylist<>();
         for (int i = 1; i < 12; i++) {
             for (int j = 1; j < 12; j++) {
                 Point stations = new Point(400 * i, 400 * j);
-                stationlist.add(stations);
+                list.add(stations);
             }
         }
         return new stations ;
