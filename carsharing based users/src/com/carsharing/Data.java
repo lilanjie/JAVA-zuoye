@@ -16,7 +16,7 @@ public class Data {
     int [] user;//用户编号
     double []departtime;//用户出发时间
     double [][]walkforcar;
-
+//计算得到
     int p1station ;
     int p2station ;//情况不同，值不同
 
@@ -24,6 +24,7 @@ public class Data {
     //直接定义数据
     int beginday = 0;//一天的开始
     int endday = 107;//一天的结束
+    int stationtime; //时空节点，这个集合怎么定义好呢
 
     double drivepay = 2;//用户每时间步长的用车费用
     double parkcost = 5;//每天每车位停车费

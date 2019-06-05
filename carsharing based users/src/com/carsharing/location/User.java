@@ -37,34 +37,21 @@ package com.carsharing.location;
 
 
         public static User RandomCreate() {
+
             int departtime =(int) (Math.random()*108);
             Point orign = Point.randomCreate();
             Point destination = Point.randomCreate();
-            return new User(orign,destination,departtime);
+            if(Point.getDistance(orign,destination)>1000){
+                return new User(orign,destination,departtime) ;
+            }
+
+            return new User(orign,destination,departtime);//在这里添加判断距离大小试试
         }
 
-        public Boolean isEnoughFar(){
+       /* public Boolean isEnoughFar(){
             if(Point.getDistance(this.orign,this.destination)>1000){
                 return true;
             }
             return false;
-        }
-
-       // public void print() {
-
-          //  System.out.println("用户原点是： " + this.getOrign()+"终点是："+this.getDestination()+" 出发时间是："+this.getDeparttime());
-//
-        //}
-
-
-       /*
-        int usernum = 100;
-       for(int n = 0; n < usernum; n++){
-            Point usero = User.randomCreate();
-            Point userd = User.randomCreate();
-
-        }
-
-        */
-
+        }*/
 }

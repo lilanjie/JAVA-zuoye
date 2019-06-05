@@ -33,11 +33,14 @@ public class Point {
     }
 
     public static Point randomCreate(){
-        int x=(int)(Math.random()*8800);
-        int y=(int)(Math.random()*8800);
+        int x=(int)(Math.random()*1600);
+        int y=(int)(Math.random()*1600);
         return new Point(x,y);
     }
 
-
+    @Override
+    public String toString() {
+        return "x:"+x+" "+"y:"+y;
     }
+}
 
